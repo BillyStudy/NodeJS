@@ -1,5 +1,13 @@
+//imports
 const express = require('express');
 
-const app = express();
+    // inicia o servidor
+    const app = express();
 
-app.listen(3001);
+    //rotas
+    app.get('/', (rec, res) => {
+        res.send('Hello world');
+    });
+
+    //escolhendo a porta a ser ouvida
+    app.listen(3001);
