@@ -1,8 +1,12 @@
 //imports
 const express = require('express');
+const mongoose = require('mongoose');
 
-    // inicia o servidor
+    // inicia o app
     const app = express();
+
+    //iniciando o database
+    mongoose.connect('mongodb://localhost:27017/nodeapi', { useUnifiedTopology: true,  useNewUrlParser: true });
 
     //rotas
     app.get('/', (rec, res) => {
